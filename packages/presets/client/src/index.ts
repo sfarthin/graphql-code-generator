@@ -200,6 +200,7 @@ export const preset: Types.OutputPreset<ClientPresetConfig> = {
         pluginMap,
         schema: options.schema,
         config: {
+          ...config,
           inlineFragmentTypes: isMaskingFragments ? 'mask' : options.config['inlineFragmentTypes'],
           ...forwardedConfig,
         },
